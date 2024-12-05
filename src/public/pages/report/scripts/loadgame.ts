@@ -250,17 +250,16 @@ function onFetchButtonClick() {
 }
 
 function onFetchMostRecentGamesButtonClick() {
-    $("#games-list").html("Fetching games...");
-    $("#game-select-menu-container").css("display", "flex");
-
-    gamesPeriod.year = new Date().getFullYear();
-    gamesPeriod.month = new Date().getMonth() + 1;
-
     updateGamesPeriod();
 
     const username = usernameInput.val()!.toString();
-
     fetchGames(username);
+
+    setTimeout(() => {
+        $("#games-list").children().first().trigger("click");
+        // Trigger the review button
+        $("#review-button").trigger("click");
+    }, 500)
 }
 
 $("#fetch-account-games-button").on("click", onFetchButtonClick);
