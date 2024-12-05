@@ -99,6 +99,17 @@
     transform: translateY(-2px);
     position: absolute;
     top: 8px;
+    right: 39%;
+    margin-top: 4px;
+    height: 40px;
+    width: 10%;
+}
+
+#fetch-most-recent-account-games-button {
+    display: none;
+    transform: translateY(-2px);
+    position: absolute;
+    top: 8px;
     right: 27%;
     margin-top: 4px;
     height: 40px;
